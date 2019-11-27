@@ -1,0 +1,45 @@
+{
+	"id": "0b75a50a-a9ef-ff92-ec36-acacdf6f98d4",
+	"name": "testReqCollection",
+	"description": "",
+	"order": [
+		"a791c15f-ef0d-1bb9-4673-0784deea2331"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1574606255168,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "a791c15f-ef0d-1bb9-4673-0784deea2331",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://reqres.in/api/users",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 201\"] = responseCode.code === 201;\nvar jsonData = pm.response.json();\npm.test(\"Verify type\", function () { \n        pm.expect(jsonData.job).is.to.equal(\"leader\"); \n    });\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1574607054724,
+			"name": "testCreate",
+			"description": "",
+			"collectionId": "0b75a50a-a9ef-ff92-ec36-acacdf6f98d4",
+			"responses": [],
+			"rawModeData": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"leader\"\r\n}"
+		}
+	]
+}
